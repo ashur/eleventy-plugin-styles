@@ -1,7 +1,7 @@
 {
   "name": "@aaashur/eleventy-plugin-styles",
   "version": "0.1.0",
-  "description": "An Eleventy shortcode for joining truthy object values into a semicolon-delimited string",
+  "description": "An Eleventy plugin for joining truthy object values into a semicolon-delimited string",
   "main": ".eleventy.js",
   "scripts": {
     "lint": "eslint '.eleventy.js' 'src/**/*.js' 'test/**/*.js'",
