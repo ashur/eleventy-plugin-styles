@@ -6,5 +6,6 @@ const styles = require( "./src/styles" );
  */
 module.exports = ( eleventyConfig ) =>
 {
+	eleventyConfig.addFilter( "styles", styles );
 	eleventyConfig.addShortcode( "styles", styles );
 };
