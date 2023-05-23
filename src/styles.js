@@ -2,11 +2,11 @@
  * Join truthy object values into a semicolon-delimited string.
  *
  * @example
- * {% styles {
+ * styles({
  *     "background-color": backgroundColor,
  *     "--custom-property": customProperty,
- *     "--undefined-property": "green" if undefinedProperty
- * } %}
+ *     "--undefined-property": undefinedVar && "green",
+ * })
  * // returns "background-color: red; --custom-property: 10px"
  * @param {Object} args
  * @return {string}
