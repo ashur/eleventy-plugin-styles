@@ -35,12 +35,12 @@ customProperty: 10px
 sectionTitle: Section Title
 ---
 <h2 :style="styles({
-    "background-color": backgroundColor,
-    "--custom-property": customProperty,
-    "--undefined-var": undefinedVar && "green",
-}}">
-    {{ sectionTitle }}
-</h2>
+	    'background-color': backgroundColor,
+	    '--custom-property': customProperty,
+	    '--undefined-var': undefinedVar && 'green',
+	})"
+	@text="sectionTitle"
+></h2>
 ```
 
 which would return:
