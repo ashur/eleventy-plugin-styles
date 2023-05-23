@@ -1,10 +1,19 @@
 # eleventy-plugin-styles
 
-An [Eleventy](https://11ty.dev/) plugin — available as a filter and a shortcode — for joining truthy object values into a semicolon-delimited string, suitable for use in an HTML element `style` attribute.
+An [Eleventy](https://11ty.dev/) plugin — available as a filter and a shortcode — for joining truthy object values into a semicolon-delimited string, suitable for use in an HTML element's `style` attribute:
+
+```javascript
+styles({
+    "background-color": backgroundColor,
+    "--custom-property": customProperty,
+    "--falsy-variable": falsyVar && "green",
+})
+// returns "background-color: red; --custom-property: 10px"
+```
 
 ## Setup
 
-Run the following command at the root of your Eleventy project
+Run the following command at the root of your Eleventy project:
 
 ```shell
 npm install @aaashur/eleventy-plugin-styles
@@ -21,6 +30,8 @@ module.exports = (eleventyConfig) => {
 ```
 
 ## Usage
+
+`styles` is exposed both as a [filter](https://www.11ty.dev/docs/filters/) and as a [shortcode](https://www.11ty.dev/docs/shortcodes/) everywhere Eleventy supports them.
 
 ### Filter
 
